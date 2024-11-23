@@ -195,6 +195,14 @@
           <p>
             Human pose estimation methods work well on separated people but struggle with multi-body scenarios. Recent work has addressed this problem by conditioning pose estimation with detected bounding boxes or bottom-up-estimated poses. Unfortunately, all of these approaches overlooked segmentation masks and their connection to estimated keypoints. We condition pose estimation model by segmentation masks instead of bounding boxes to improve instance separation. This improves top-down pose estimation in multi-body scenarios but does not fix detection errors. Consequently, we develop BBox-Mask-Pose (BMP), integrating detection, segmentation and pose estimation into self-improving feedback loop. We adapt detector and pose estimation model for conditioning by instance masks and use Segment Anything as pose-to-mask model to close the circle. With only small models, BMP is superior to top-down methods on OCHuman dataset and to detector-free methods on COCO dataset, combining the best from both approaches and matching state of art performance in both settings. Code and data will be available for research purposes.
           </p>
+          <h2 class="title is-3">TL;DR</h2>
+          <p>
+            <ul>
+              <li>Contribution 1 which has quite a long description</li>
+              <li>Contribution 2</li>
+              <li>Contribution 3</li>
+            </ul>
+          </p>
         </div>
       </div>
     </div>
@@ -204,33 +212,46 @@
 
 
 <!-- Paper contributions -->
-<section class="section hero is-light">
+<!-- <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3 has-text-centered">Contributions</h2>
         <div class="content">
-          <ul>
-            <li>Contribution 1 which has quite a long description</li>
-            <li>Contribution 2</li>
-            <li>Contribution 3</li>
-          </ul>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- Paper contributions -->
+
+<!-- Results description -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Results</h2>
+        <div class="content has-text-justified">
+          <p>
+            Comparison of the SOTA (<a href="https://github.com/ViTAE-Transformer/ViTPose" target="_blank">ViTPose</a>) trained on the COCO dataset and our method trained on the COCO dataset augmented with RePoGen images. <br>
+            The limbs are: <span style="background-color:yellow">right arm</span>, <span style="background-color:rgb(255, 115, 0)">right leg</span>, <span style="background-color:cyan">left arm</span> and <span style="background-color:rgb(0, 119, 255)">left leg</span>.
+          </p>
+        </div>
       </div>
     </div>
   </div>
 </section>
-<!-- Paper contributions -->
+<!-- End Results description -->
+
 
 <!-- Image carousel -->
 <section class="hero is-small is-centered">
-  <div class="container is-centered">
   <div class="hero-body">
-    <h2 class="title is-3 has-text-centered">Results</h2>
+    <!-- <h2 class="title is-3 has-text-centered">Results</h2>
     <div class="content has-text-justified">
       <p>
         Comparison of the SOTA (<a href="https://github.com/ViTAE-Transformer/ViTPose" target="_blank">ViTPose</a>) trained on the COCO dataset and our method trained on the COCO dataset augmented with RePoGen images. <br>
         The limbs are: <span style="background-color:yellow">right arm</span>, <span style="background-color:rgb(255, 115, 0)">right leg</span>, <span style="background-color:cyan">left arm</span> and <span style="background-color:rgb(0, 119, 255)">left leg</span>.
-      </p>
+      </p> -->
     
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
