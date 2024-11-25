@@ -149,7 +149,7 @@
 
 
 <!-- TL;DR -->
-<section class="section hero">
+<section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -166,7 +166,7 @@
 
 
 <!-- Youtube video -->
-<section class="hero is-small is-light">
+<section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <!-- Paper video. -->
@@ -186,7 +186,7 @@
 <!-- End youtube video -->
 
 <!-- Paper abstract -->
-<section class="section hero">
+<section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -224,7 +224,7 @@
 <!-- Paper contributions -->
 
 <!-- Results description -->
-<section class="section hero is-light" style="margin-bottom: 0;padding-bottom: 0;">
+<section class="section hero" style="margin-bottom: 0;padding-bottom: 0;">
   <div class="container is-max-desktop" style="margin-bottom: 0;">
     <div class="columns is-centered has-text-centered" style="margin-bottom: 0;">
       <div class="column is-four-fifths" style="margin-bottom: 0;padding-bottom: 0;">
@@ -247,7 +247,7 @@
 
 
 <!-- Image carousel -->
-<section class="hero is-small is-centered is-light" style="margin-top: 0;padding-top: 0;">
+<section class="hero is-small is-centered" style="margin-top: 0;padding-top: 0;">
   <div class="hero-body" style="margin-top: 0;padding-top: 0;">
     <div class="container" style="margin-top: 0;padding-top: 0;">
       <div id="results-carousel" class="carousel results-carousel" style="margin-top: 0;padding-top: 0;">
@@ -293,6 +293,61 @@
         Fourth image description.
       </h2> -->
     </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+
+<!-- Results description -->
+<section class="section hero is-light" style="margin-bottom: 0;padding-bottom: 0;">
+  <div class="container is-max-desktop" style="margin-bottom: 0;">
+    <div class="columns is-centered has-text-centered" style="margin-bottom: 0;">
+      <div class="column is-four-fifths" style="margin-bottom: 0;padding-bottom: 0;">
+        <h2 class="title is-3">BBox-Mask-Pose loop</h2>
+        <div class="content has-text-justified">
+          <p>
+            The following GIFs show the BBox-Mask-Pose loop in action. The loop consists of the following steps:
+            <ol>
+              <li><b>Detect</b> using any off-the-shelf detector</li>
+              <li><b>Estimate pose</b> using MaskPose conditioned by segmentation mask</li>
+              <li><b>Refine masks</b> using Segment Anything conditioned by pose</li>
+              <li><b>Mask foreground</b> masks</li>
+              <li><b>Detect</b> in images with masked foreground</li>
+              <li><b>Estimate pose</b> using MaskPose conditioned by segmentation mask</li>
+              <li> ... </li>
+            </ol>
+            <!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non fermentum tellus, in euismod ligula. Praesent pulvinar finibus sollicitudin. Duis in lacus tempor, tincidunt ligula eu, aliquam nisi.  -->
+            <!-- Comparison of the SOTA (<a href="https://github.com/ViTAE-Transformer/ViTPose" target="_blank">ViTPose</a>) trained on the COCO dataset and our method trained on the COCO dataset augmented with RePoGen images. <br>
+            The limbs are: <span style="background-color:yellow">right arm</span>, <span style="background-color:rgb(255, 115, 0)">right leg</span>, <span style="background-color:cyan">left arm</span> and <span style="background-color:rgb(0, 119, 255)">left leg</span>. -->
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Results description -->
+
+<!-- Image carousel -->
+<section class="hero is-small is-centered is-light" style="margin-top: 0;padding-top: 0;">
+  <div class="hero-body" style="margin-top: 0;padding-top: 0;">
+    <div class="container" style="margin-top: 0;padding-top: 0;">
+      <div id="results-carousel" class="carousel results-carousel" style="margin-top: 0;padding-top: 0;">
+       <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/gifs/004806_BMP.gif" alt="004806.jpg"/>
+        <!-- <h2 class="subtitle has-text-centered">
+          First image description.
+        </h2> -->
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/gifs/004806_BMP.gif" alt="004806.jpg"/>
+        <!-- <h2 class="subtitle has-text-centered">
+          Second image description.
+        </h2> -->
+      </div>
   </div>
 </div>
 </div>
