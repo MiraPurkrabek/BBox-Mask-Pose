@@ -11,9 +11,6 @@ body {
   .link-block a {
       margin-top: 5px;
       margin-bottom: 5px;
-      display: flex; /* Enable flexbox */
-      justify-content: space-between; /* Equal spacing between items */
-      align-items: center; /* Center vertically if needed */
       margin-left: 40px;
       margin-right: 40px;
   }
