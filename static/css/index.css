@@ -11,12 +11,9 @@ body {
   .link-block a {
       margin-top: 5px;
       margin-bottom: 5px;
-  }
-
-  .publication-links {
-    display: flex; /* Enable flexbox */
-    justify-content: space-between; /* Equal spacing between items */
-    align-items: center; /* Center vertically if needed */
+      display: flex; /* Enable flexbox */
+      justify-content: space-between; /* Equal spacing between items */
+      align-items: center; /* Center vertically if needed */
   }
   
   .dnerf {
