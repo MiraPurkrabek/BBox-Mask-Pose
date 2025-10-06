@@ -2,17 +2,68 @@ body {
     font-family: 'Noto Sans', sans-serif;
   }
   
+.hero-body:first-of-type {
+    padding-top: 3rem;
+    padding-bottom: 0.5rem;
+  }
   
   .footer .icon-link {
       font-size: 25px;
       color: #000;
   }
   
-  .link-block a {
-      margin-top: 5px;
-      margin-bottom: 5px;
-      margin-left: 10px;
-      margin-right: 10px;
+  .publication-links-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0rem;
+  }
+
+  .publication-links {
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .publication-links .link-block {
+    flex: 1 1 0;
+    display: flex;
+  }
+
+  .publication-links .link-block a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.85rem 0.5rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.82);
+    /* box-shadow: 0 14px 34px -24px rgba(8, 32, 84, 0.95); */
+    font-weight: 600;
+    /* transition: transform 0.18s ease, box-shadow 0.18s ease; */
+  }
+
+  .publication-links .link-block a:hover,
+  .publication-links .link-block a:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 22px 42px -24px rgba(8, 32, 84, 0.95);
+  }
+
+  .publication-links .icon {
+    margin-right: 0.75rem;
+  }
+
+  @media screen and (max-width: 900px) {
+    .publication-links {
+      flex-direction: column;
+    }
+
+    .publication-links .link-block {
+      flex: none;
+    }
   }
   
   .dnerf {
@@ -30,9 +81,6 @@ body {
   }
   
   
-  .publication-title {
-  }
-  
   .publication-banner {
     max-height: parent;
   
@@ -46,15 +94,12 @@ body {
     object-fit: fit;
   }
   
-  .publication-header .hero-body {
-  }
-  
   .publication-title {
       font-family: 'Google Sans', sans-serif;
   }
   
   .publication-authors {
-      font-family: 'Google Sans', sans-serif;
+    font-family: 'Google Sans', sans-serif;
   }
   
   .publication-venue {
@@ -68,10 +113,6 @@ body {
       width: fit-content;
       font-weight: bolder;
   }
-  
-  .publication-authors {
-  }
-  Visual Recognition Group, Czech Technical University in Prague
   
   .publication-authors a {
      color: hsl(204, 86%, 53%) !important;
@@ -87,12 +128,9 @@ body {
     display: inline-block;
   }
   
-  .publication-banner img {
-  }
-  
-  .publication-authors {
-    /*color: #4286f4;*/
-  }
+  /* .publication-banner img { } */
+
+  /* .publication-authors { color: #4286f4; } */
   
   .publication-video {
       position: relative;
@@ -112,8 +150,7 @@ body {
       height: 100%;
   }
   
-  .publication-body img {
-  }
+  /* .publication-body img { } */
   
   .results-carousel {
     overflow: hidden;
