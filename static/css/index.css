@@ -25,7 +25,7 @@ body {
     gap: 0.75rem;
     margin: 0 auto;
     width: 100%;
-    max-width: 100%;
+    max-width: 70%;
   }
 
   .publication-links .link-block {
@@ -174,6 +174,24 @@ body {
   .eql-cntrb { 
     font-size: smaller;
   }
+
+  /* ---- Layout width customization ----
+     The site felt too narrow on large desktop screens because Bulma's
+     .container.is-max-desktop caps the width (default ~1152px). We relax
+     that constraint here for larger viewports so main content (hero, links,
+     carousels) can breathe more horizontally without going full-bleed.
+     Adjust the max-width below to taste (e.g., 1400px, 1500px, 1600px). */
+  @media screen and (min-width: 1216px) { /* above Bulma desktop breakpoint */
+    .container.is-max-desktop {
+      max-width: 1600px; /* was ~1152px; wider but still readable */
+    }
+  }
+
+  /* Optional: if you also want the hero top section even wider while keeping
+     later sections narrower, you could instead target just the first hero:
+     .hero:first-of-type .container.is-max-desktop { max-width: 1550px; }
+     (Leave commented for now) */
+  /* .hero:first-of-type .container.is-max-desktop { max-width: 1550px; } */
   
   
   
