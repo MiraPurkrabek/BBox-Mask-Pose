@@ -61,6 +61,18 @@ $(document).ready(function() {
 	const resizeHandler = debounce(syncPublicationLinksWidth, 120);
 	syncPublicationLinksWidth();
 	$(window).on('resize', resizeHandler);
+
+	const $languageSwitch = $('.language-switch');
+	if ($languageSwitch.length) {
+		$(document).on('click', function (event) {
+			const $target = $(event.target);
+			if (!$target.closest('.language-switch').length) {
+				$languageSwitch.each(function () {
+					this.removeAttribute('open');
+				});
+			}
+		});
+	}
 });
 
 window.addEventListener('load', syncPublicationLinksWidth);
