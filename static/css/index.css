@@ -227,6 +227,11 @@ body {
     border-radius: 14px;
     box-shadow: 0 12px 26px -20px rgba(8, 32, 84, 0.65);
     border: 1px solid rgba(32, 87, 129, 0.08);
+    background: #f3f5f8;
+  }
+
+  .feature-card .card-content {
+    text-align: center;
   }
 
   .feature-card .card-content .title,
@@ -248,6 +253,12 @@ body {
 
   .paper-card .buttons {
     justify-content: center;
+  }
+
+  .paper-card .button.is-link.is-light {
+    background-color: #e1e6f0;
+    color: #205781;
+    border-color: #c6d1e4;
   }
   
   

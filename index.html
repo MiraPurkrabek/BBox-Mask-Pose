@@ -139,8 +139,8 @@
                   <div class="publication-title">
                   <p class="title is-4">Detection, Pose Estimation and Segmentation for Multiple Bodies: Closing the Virtuous Circle</p>
                   </div>
-                  <!-- <p class="subtitle is-6">ICCV 2025</p> -->
-                  <span class="tag is-info is-medium">ICCV 2025</span>
+                  <p class="subtitle is-6">ICCV 2025</p>
+                  <!-- <span class="tag is-info is-medium">ICCV 2025</span> -->
                   <div class="is-size-6 publication-authors">
                     <span class="author-block">
                       <a href="https://mirapurkrabek.github.io/" target="_blank">Miroslav Purkrabek</a><sup></sup></span>,
@@ -157,13 +157,23 @@
                   </span>
                 </div>
                                 <div class="buttons are-small">
-                    <a class="button is-link is-light" href="static/pdfs/BBoxMaskPose.pdf" target="_blank">Paper+Suppl.</a>
-                    <a class="button is-link is-light" href="https://arxiv.org/abs/2412.01562" target="_blank">arXiv</a>
-                    <a class="button is-link is-light" href="static/pdfs/ICCV25-BBoxMaskPose-poster.pdf" target="_blank">Poster</a>
-                  </div>
+                                  <a class="button is-link is-light" href="static/pdfs/BBoxMaskPose.pdf" target="_blank">
+                                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                                    <span>Paper+Suppl.</span>
+                                  </a>
+                                  <a class="button is-link is-light" href="https://arxiv.org/abs/2412.01562" target="_blank">
+                                    <span class="icon"><i class="ai ai-arxiv"></i></span>
+                                    <span>arXiv</span>
+                                  </a>
+                                  <a class="button is-link is-light" href="static/pdfs/ICCV25-BBoxMaskPose-poster.pdf" target="_blank">
+                                    <span class="icon"><i class="far fa-clipboard"></i></span>
+                                    <span>Poster</span>
+                                  </a>
+                                </div>
                 </div>
               </div>
             </div>
+
             <div class="column is-half">
               <div class="card paper-card">
                 <div class="card-content">
@@ -189,13 +199,54 @@
                   </span>
                 </div>
                                 <div class="buttons are-small">
-                    <!-- <a class="button is-link is-light" href="static/pdfs/BBoxMaskPose.pdf" target="_blank">Paper+Suppl.</a> -->
-                    <a class="button is-link is-light" href="https://arxiv.org/abs/2601.08982" target="_blank">arXiv</a>
-                    <!-- <a class="button is-link is-light" href="static/pdfs/ICCV25-BBoxMaskPose-poster.pdf" target="_blank">Poster</a> -->
-                  </div>
+                                  <!-- <a class="button is-link is-light" href="static/pdfs/BBoxMaskPose.pdf" target="_blank">Paper+Suppl.</a> -->
+                                  <a class="button is-link is-light" href="https://arxiv.org/abs/2601.08982" target="_blank">
+                                    <span class="icon"><i class="ai ai-arxiv"></i></span>
+                                    <span>arXiv</span>
+                                  </a>
+                                  <!-- <a class="button is-link is-light" href="static/pdfs/ICCV25-BBoxMaskPose-poster.pdf" target="_blank">Poster</a> -->
+                                </div>
                 </div>
               </div>
             </div>
+
+            <div class="column is-half">
+              <div class="card paper-card">
+                <div class="card-content">
+                  <div class="publication-title">
+                  <p class="title is-4">BBoxMaskPose v2:<br>Expanding Mutual Conditioning to 3D</p>
+                  </div>
+                  <!-- <p class="subtitle is-6">CVWW 2026</p> -->
+                   <br>
+                  <div class="is-size-6 publication-authors">
+                    <span class="author-block">
+                      <a href="https://mirapurkrabek.github.io/" target="_blank">Miroslav Purkrabek</a><sup></sup></span>,
+                    <span class="author-block">
+                      Constantin Kolomiiets<sup></sup></span>,
+                  <span class="author-block">
+                    <a href="https://cmp.felk.cvut.cz/~matas/" target="_blank">Jiri Matas</a><sup></sup></span>
+                  </span>
+                </div>
+                
+                <div class="is-size-6 publication-authors">
+                  <span class="author-block">
+                    <a href="https://vrg.fel.cvut.cz" target="_blank">Visual Recognition Group</a>
+                    <br>
+                    Czech Technical University in Prague
+                  </span>
+                </div>
+                                <div class="buttons are-small">
+                                  <!-- <a class="button is-link is-light" href="static/pdfs/BBoxMaskPose.pdf" target="_blank">Paper+Suppl.</a> -->
+                                  <a class="button is-link is-light" href="https://arxiv.org/abs/2601.08982" target="_blank">
+                                    <span class="icon"><i class="ai ai-arxiv"></i></span>
+                                    <span>arXiv</span>
+                                  </a>
+                                  <!-- <a class="button is-link is-light" href="static/pdfs/ICCV25-BBoxMaskPose-poster.pdf" target="_blank">Poster</a> -->
+                                </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -220,7 +271,60 @@
     </div>
   </section>
 
-  <!-- Youtube video -->
+  <section class="section hero" id="contributions">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 has-text-centered">Contributions</h2>
+          <p class="has-text-centered is-size-6" style="margin-bottom: 1rem;">
+            All components are part of the
+            <a href="https://github.com/MiraPurkrabek/BBoxMaskPose" target="_blank">GitHub codebase</a>.
+          </p>
+          <div class="columns is-multiline">
+            <div class="column is-half">
+              <div class="card feature-card">
+                <div class="card-content">
+                  <p class="title is-5">BBox-Mask-Pose</p>
+                  <p class="content">Core loop connecting detection, segmentation, and pose estimation for crowded scenes.</p>
+                  <!-- <span class="tag is-info">Pipeline</span> -->
+                </div>
+              </div>
+            </div>
+            <div class="column is-half">
+              <div class="card feature-card">
+                <div class="card-content">
+                  <p class="title is-5">PMPose</p>
+                  <p class="content">Strong top-down pose estimator designed for multi-person precision.</p>
+                  <!-- <span class="tag is-success">Model</span> -->
+                </div>
+              </div>
+            </div>
+            <div class="column is-half">
+              <div class="card feature-card">
+                <div class="card-content">
+                  <p class="title is-5">SAM-pose2seg</p>
+                  <p class="content">Pose-guided instance segmentation in crowds with dedicated benchmarks.</p>
+                  <!-- <span class="tag is-link">Method</span> -->
+                </div>
+              </div>
+            </div>
+            <div class="column is-half">
+              <div class="card feature-card">
+                <div class="card-content">
+                  <p class="title is-5">OCHuman-Pose dataset</p>
+                  <p class="content">New multi-person data for challenging crowded scenarios.</p>
+                  <!-- <span class="tag is-light">Dataset</span> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- Youtube video -->
   <section class="hero is-small">
     <div class="hero-body">
       <div class="container">
@@ -240,59 +344,6 @@
     </div>
   </section>
   <!-- End youtube video -->
-
-  <section class="section hero" id="contributions">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3 has-text-centered">Contributions</h2>
-          <p class="has-text-centered is-size-6" style="margin-bottom: 1rem;">
-            All components are part of the project codebase on
-            <a href="https://github.com/MiraPurkrabek/BBoxMaskPose" target="_blank">GitHub</a>.
-          </p>
-          <div class="columns is-multiline">
-            <div class="column is-half">
-              <div class="card feature-card">
-                <div class="card-content">
-                  <p class="title is-5">BBox-Mask-Pose</p>
-                  <p class="content">Core loop connecting detection, segmentation, and pose estimation for crowded scenes.</p>
-                  <span class="tag is-info">Pipeline</span>
-                </div>
-              </div>
-            </div>
-            <div class="column is-half">
-              <div class="card feature-card">
-                <div class="card-content">
-                  <p class="title is-5">PMPose</p>
-                  <p class="content">Strong top-down pose estimator designed for multi-person precision.</p>
-                  <span class="tag is-success">Model</span>
-                </div>
-              </div>
-            </div>
-            <div class="column is-half">
-              <div class="card feature-card">
-                <div class="card-content">
-                  <p class="title is-5">SAM-pose2seg</p>
-                  <p class="content">Pose-guided instance segmentation in crowds with dedicated benchmarks.</p>
-                  <span class="tag is-link">Method</span>
-                </div>
-              </div>
-            </div>
-            <div class="column is-half">
-              <div class="card feature-card">
-                <div class="card-content">
-                  <p class="title is-5">OCHuman-Pose dataset</p>
-                  <p class="content">New multi-person data for challenging crowded scenarios.</p>
-                  <span class="tag is-light">Dataset</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
 
   <!-- Paper contributions -->
   <!-- <section class="section hero is-light">
