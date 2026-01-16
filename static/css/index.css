@@ -19,6 +19,25 @@ body {
     margin-bottom: 0rem;
   }
 
+  .project-links-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+  }
+
+  .project-link {
+    border-radius: 12px;
+    padding: 0.85rem 1.25rem;
+    font-weight: 600;
+  }
+
   .publication-links {
     display: flex;
     flex-direction: row;
@@ -192,6 +211,44 @@ body {
      .hero:first-of-type .container.is-max-desktop { max-width: 1550px; }
      (Leave commented for now) */
   /* .hero:first-of-type .container.is-max-desktop { max-width: 1550px; } */
+
+  .project-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .feature-card,
+  .paper-card {
+    height: 100%;
+    border-radius: 14px;
+    box-shadow: 0 12px 26px -20px rgba(8, 32, 84, 0.65);
+    border: 1px solid rgba(32, 87, 129, 0.08);
+  }
+
+  .feature-card .card-content .title,
+  .paper-card .card-content .title {
+    margin-bottom: 0.5rem;
+  }
+
+  .paper-card .buttons {
+    margin-top: 0.75rem;
+  }
+
+  .paper-card .card-content {
+    text-align: center;
+  }
+
+  .paper-card .publication-authors {
+    text-align: center;
+  }
+
+  .paper-card .buttons {
+    justify-content: center;
+  }
   
   
   
