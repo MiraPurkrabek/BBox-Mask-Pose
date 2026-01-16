@@ -1,6 +1,23 @@
 body {
     font-family: 'Noto Sans', sans-serif;
   }
+
+  .language-switch {
+    position: fixed;
+    top: 0.75rem;
+    right: 1.25rem;
+    z-index: 1000;
+    font-size: 0.9rem;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 0.25rem 0.6rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px -12px rgba(8, 32, 84, 0.55);
+  }
+
+  .language-switch a {
+    color: #205781;
+    font-weight: 600;
+  }
   
 .hero-body:first-of-type {
     padding-top: 3rem;
