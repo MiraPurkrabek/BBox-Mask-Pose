@@ -105,6 +105,7 @@
             <div class="project-badges">
               <!-- <span class="tag is-warning is-medium">ICCV 2025</span> -->
               <span class="tag is-info is-medium">ICCV 2025</span>
+              <span class="tag is-info is-medium">CVPR 2025</span>
               <!-- <span class="tag is-info is-medium">IJCV 2026</span> -->
               <!-- <span class="tag is-success is-medium">PMPose</span> -->
               <!-- <span class="tag is-link is-medium">SAM-pose2seg</span> -->
@@ -149,6 +150,20 @@
       </div>
     </div>
   </section>
+
+
+  <section class="section" id="loop-gif">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths has-text-centered">
+          <figure class="image" style="display: flex; justify-content: center;">
+            <img src="static/gifs/043+076+174.gif" alt="BBox-Mask-Pose loop GIF" style="max-width: 360px; height: auto; display: block; margin: 0 auto;" />
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>  
+
 
   <section class="section" id="papers">
     <div class="container is-max-desktop">
@@ -237,6 +252,41 @@
               <div class="card paper-card">
                 <div class="card-content">
                   <div class="publication-title">
+                  <p class="title is-4"><a href="" target="_blank">ProbPose: A Probabilistic Approach to 2D Human Pose Estimation</a></p>
+                  </div>
+                  <p class="subtitle is-6">CVPR 2025</p>
+                   <!-- <br> -->
+                  <div class="is-size-6 publication-authors">
+                    <span class="author-block">
+                      <a href="https://mirapurkrabek.github.io/" target="_blank">Miroslav Purkrabek</a><sup></sup></span>,
+                  <span class="author-block">
+                    <a href="https://cmp.felk.cvut.cz/~matas/" target="_blank">Jiri Matas</a><sup></sup></span>
+                  </span>
+                </div>
+                
+                <div class="is-size-6 publication-authors">
+                  <span class="author-block">
+                    <a href="https://vrg.fel.cvut.cz" target="_blank">Visual Recognition Group</a>
+                    <br>
+                    Czech Technical University in Prague
+                  </span>
+                </div>
+                                <div class="buttons are-small">
+                                  <!-- <a class="button is-link is-light" href="static/pdfs/BBoxMaskPose.pdf" target="_blank">Paper+Suppl.</a> -->
+                                  <a class="button is-link is-light" href="https://mirapurkrabek.github.io/ProbPose/" target="_blank">Project Website</a>
+                                  <a class="button is-link is-light" href="https://arxiv.org/abs/2412.02254" target="_blank">
+                                    <span class="icon"><i class="ai ai-arxiv"></i></span>
+                                    <span>arXiv</span>
+                                  </a>
+                                </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="column is-half">
+              <div class="card paper-card">
+                <div class="card-content">
+                  <div class="publication-title">
                   <p class="title is-4">BBoxMaskPose v2:<br>Expanding Mutual Conditioning to 3D</p>
                   </div>
                   <!-- <p class="subtitle is-6">CVWW 2026</p> -->
@@ -262,7 +312,7 @@
                                   <!-- <a class="button is-link is-light" href="static/pdfs/BBoxMaskPose.pdf" target="_blank">Paper+Suppl.</a> -->
                                   <a class="button is-link is-light" href="https://arxiv.org/abs/2601.08982" target="_blank">
                                     <span class="icon"><i class="ai ai-arxiv"></i></span>
-                                    <span>arXiv</span>
+                                    <span>arXiv; comming soon</span>
                                   </a>
                                   <!-- <a class="button is-link is-light" href="static/pdfs/ICCV25-BBoxMaskPose-poster.pdf" target="_blank">Poster</a> -->
                                 </div>
@@ -283,10 +333,14 @@
           <h2 class="title is-3 has-text-centered">Project Overview</h2>
           <div class="content has-text-justified">
             <p>
-              BBox-Mask-Pose is a project line focused on robust multi-person perception. We connect detection, pose
-              estimation, and segmentation in a feedback loop and continue to extend the stack with stronger models
-              (PMPose), improved pipelines (BBox-Mask-Pose v2), and pose-to-mask tools (SAM-pose2seg). New datasets are
-              being prepared to support evaluation in crowded scenes.
+              Bounding boxes, instance masks, and poses capture complementary aspects of the human body; enforcing their mutual consistency resolves ambiguities that dominate crowded scenes.
+              The BBox–Mask–Pose framework links detection, pose estimation, and segmentation in an iterative loop, where each prediction is used to refine the others.
+              <strong>ProbPose</strong> adds calibrated uncertainty, visibility, and presence modeling, stabilizing keypoints under occlusion and cropping.
+              <strong>PMPose</strong> combines probabilistic modeling with mask conditioning, enabling robust top-down pose estimation in dense interactions.
+              <strong>SAM-pose2seg</strong> specializes SAM for pose-guided human segmentation, simplifying prompting and improving mask quality in crowds.
+              Together, these components form <strong>BBoxMaskPose v2</strong>, delivering clear improvements in separating interacting people and setting new state-of-the-art on COCO and OCHuman and downstream 3D pose estimation.
+              It is the first methods with result above 50 AP on OCHuman.
+              This work shows that structured mutual conditioning of small, task-specific models can be more effective than scaling up large, shared-feature human-centered foundation models.
             </p>
           </div>
         </div>
@@ -308,7 +362,9 @@
               <div class="card feature-card">
                 <div class="card-content">
                   <p class="title is-5">BBox-Mask-Pose</p>
-                  <p class="content">Core loop connecting detection, segmentation, and pose estimation for crowded scenes.</p>
+                  <p class="content">Iterative loop of detection, pose estimation, and instance segmentation, where each prediction is explicitly conditioned on the others.
+                    By enforcing consistency between representations, the loop progressively corrects errors, separates interacting people, and recovers missed instances.
+                  </p>
                   <!-- <span class="tag is-info">Pipeline</span> -->
                 </div>
               </div>
@@ -317,7 +373,7 @@
               <div class="card feature-card">
                 <div class="card-content">
                   <p class="title is-5">PMPose</p>
-                  <p class="content">Strong top-down pose estimator designed for multi-person precision.</p>
+                  <p class="content">Top-down 2D pose estimator that combines mask conditioning with a probabilistic keypoint representation, establishing state-of-the-art performance among top-down methods, especially in crowded scenes.</p>
                   <!-- <span class="tag is-success">Model</span> -->
                 </div>
               </div>
@@ -326,7 +382,10 @@
               <div class="card feature-card">
                 <div class="card-content">
                   <p class="title is-5">SAM-pose2seg</p>
-                  <p class="content">Pose-guided instance segmentation in crowds with dedicated benchmarks.</p>
+                  <p class="content">
+                  Pose-guided human instance segmentation model that adapts SAM to segment people from 2D pose keypoints.
+                  By aligning prompting and decoder with human pose cues, it produces cleaner, more stable masks in crowded scenes.
+                  </p>
                   <!-- <span class="tag is-link">Method</span> -->
                 </div>
               </div>
@@ -335,7 +394,11 @@
               <div class="card feature-card">
                 <div class="card-content">
                   <p class="title is-5">OCHuman-Pose dataset</p>
-                  <p class="content">New multi-person data for challenging crowded scenarios.</p>
+                  <p class="content">
+                    New multi-person data for challenging crowded scenarios.
+                    Extension of the OCHuman dataset with 2D pose annotations for all visible people, including previously ignored instances.
+                    It enables more accurate evaluation of detection and pose estimation than original OCHuman.
+                  </p>
                   <!-- <span class="tag is-light">Dataset</span> -->
                 </div>
               </div>
@@ -345,6 +408,33 @@
       </div>
     </div>
   </section>
+
+  <!-- OCHuman-Pose dataset download -->
+  <section class="section hero is-light" id="ochuman-pose">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 has-text-centered">OCHuman-Pose Dataset</h2>
+          <div class="content has-text-justified">
+            <p>
+              The OCHuman-Pose dataset is hosted on Hugging Face.
+              Download the files from the link below.
+            </p>
+            <p class="has-text-centered">
+              <a class="button is-link is-light">
+                <span class="icon"><i class="fas fa-download"></i></span>
+                <span>Hugging Face Dataset (comming soon)</span>
+              </a>
+            </p>
+            <!-- <p class="is-size-6 has-text-centered">
+              If you prefer the CLI, run: <code>huggingface-cli download purkrmir/OCHuman-Pose --repo-type dataset</code>
+            </p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
 
 <!-- Youtube video -->
@@ -382,7 +472,7 @@
   <!-- Paper contributions -->
 
   <!-- Results description -->
-  <section class="section hero" style="margin-bottom: 0;padding-bottom: 0;">
+  <section class="section hero is-light" style="margin-bottom: 0;padding-bottom: 0;">
     <div class="container is-max-desktop" style="margin-bottom: 0;">
       <div class="columns is-centered has-text-centered" style="margin-bottom: 0;">
         <div class="column is-four-fifths" style="margin-bottom: 0;padding-bottom: 0;">
@@ -405,7 +495,7 @@
 
 
   <!-- Image carousel -->
-  <section class="hero is-small is-centered" style="margin-top: 0;padding-top: 0;">
+  <section class="hero is-small is-light is-centered" style="margin-top: 0;padding-top: 0;">
     <div class="hero-body" style="margin-top: 0;padding-top: 0;">
       <div class="container" style="margin-top: 0;padding-top: 0;">
         <div id="results-carousel-1" class="carousel results-carousel" style="margin-top: 0;padding-top: 0;">
@@ -462,7 +552,7 @@
     </div>
   </section>
   <!-- End image carousel -->
-  <section class="hero is-small is-centered" style="margin-top: 0;padding-top: 0;">
+  <section class="hero is-small is-light is-centered" style="margin-top: 0;padding-top: 0;">
     <div class="hero-body" style="margin-top: 0;padding-top: 0;">
       <div class="container" style="margin-top: 0;padding-top: 0;">
         <div id="results-carousel-2" class="carousel results-carousel" style="margin-top: 0;padding-top: 0;">
@@ -676,6 +766,13 @@ End paper poster -->
     <div class="container is-max-desktop content is-light">
       <h2 class="title">BibTeX</h2>
       <pre><code>
+        @InProceedings{BMPv2,
+            author    = {Purkrabek, Miroslav and Kolomiiets, Constantin and Matas, Jiri},
+            title     = {BBoxMaskPose v2: Expanding Mutual Conditioning to 3D},
+            booktitle = {arXiv preprint arXiv:to be added},
+            year      = {2026}
+       }
+
         @InProceedings{Purkrabek2025ICCV,
             author    = {Purkrabek, Miroslav and Matas, Jiri},
             title     = {Detection, Pose Estimation and Segmentation for Multiple Bodies: Closing the Virtuous Circle},
