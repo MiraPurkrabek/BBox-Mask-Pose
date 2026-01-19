@@ -3,9 +3,10 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="BBox-Mask-Pose 프로젝트 페이지. 한국어 버전은 준비 중입니다.">
+  <meta name="description" content="BBox-Mask-Pose 프로젝트 라인: ICCV 2025 BBox-Mask-Pose 논문, CVPR 2025 ProbPose, BMPv2, PMPose, SAM-pose2seg, 신규 데이터 및 라이브 데모.">
   <meta property="og:title" content="BBox-Mask-Pose 프로젝트" />
-  <meta property="og:description" content="BBox-Mask-Pose 프로젝트 페이지. 한국어 버전은 준비 중입니다." />
+  <meta property="og:description"
+    content="BBox-Mask-Pose 프로젝트 라인: ICCV 2025 BBox-Mask-Pose 논문, CVPR 2025 ProbPose, BMPv2, PMPose, SAM-pose2seg, 신규 데이터 및 라이브 데모." />
   <meta property="og:url" content="https://mirapurkrabek.github.io/BBox-Mask-Pose/index.ko.html" />
   <meta property="og:image" content="static/images/banner/BBox-Mask-Pose_banner_big.jpg" />
   <meta property="og:image:width" content="1200" />
@@ -22,9 +23,12 @@
   <link rel="alternate" hreflang="cs" href="https://mirapurkrabek.github.io/BBox-Mask-Pose/index.cs.html" />
 
   <meta name="twitter:title" content="BBox-Mask-Pose 프로젝트">
-  <meta name="twitter:description" content="BBox-Mask-Pose 프로젝트 페이지. 한국어 버전은 준비 중입니다.">
+  <meta name="twitter:description"
+    content="BBox-Mask-Pose 프로젝트 라인: ICCV 2025 BBox-Mask-Pose 논문, CVPR 2025 ProbPose, BMPv2, PMPose, SAM-pose2seg, 신규 데이터 및 라이브 데모.">
   <meta name="twitter:image" content="static/images/banner/BBox-Mask-Pose_banner_big.jpg">
   <meta name="twitter:card" content="static/images/banner/BBox-Mask-Pose_banner_big.png">
+  <meta name="keywords"
+    content="human pose estimation,pose estimation,pose,segmentation,bmp,bbox-mask-pose,research,computer vision,purkrabek,ICCV,ICCV 2025,ICCV2025">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Miroslav Purkrabek" />
 
@@ -38,6 +42,33 @@
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\\(','\\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+  <script src="static/js/index.js"></script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1YMZGNY57C"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-1YMZGNY57C');
+  </script>
+
 </head>
 
 <body>
@@ -62,16 +93,481 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">BBox-Mask-Pose 프로젝트</h1>
-            <p class="subtitle is-5">한국어 버전은 준비 중입니다.</p>
-            <p class="is-size-6">영문 페이지를 확인해 주세요.</p>
-            <div style="margin-top: 1rem;">
-              <a href="index.html" class="button is-link is-light">English</a>
+            <div class="project-badges">
+              <span class="tag is-info is-medium">ICCV 2025</span>
+              <span class="tag is-info is-medium">CVPR 2025</span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://mirapurkrabek.github.io/" target="_blank">Miroslav Purkrabek</a><sup></sup></span>,
+            <span class="author-block">
+              Constantin Kolomiiets<sup></sup></span>,
+            </span>
+            <span class="author-block">
+              <a href="https://cmp.felk.cvut.cz/~matas/" target="_blank">Jiri Matas</a><sup></sup></span>
+            </span>
+          </div>
+          
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://vrg.fel.cvut.cz" target="_blank">Visual Recognition Group</a>
+              <br>
+              Prague 체코공과대학교
+            </span>
+          </div>
+              
+              <div class="project-links-wrapper has-text-centered">
+              <div class="project-links">
+                <a href="https://github.com/MiraPurkrabek/BBoxMaskPose" target="_blank" class="button is-link is-medium is-light project-link">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>GitHub 코드</span>
+                </a>
+                <a href="https://huggingface.co/spaces/purkrmir/BBoxMaskPose-demo" target="_blank" class="button is-success is-medium is-light project-link">
+                  <span class="icon"><i class="fa fa-gamepad"></i></span>
+                  <span>라이브 데모</span>
+                </a>
+              </div>
+            </div>
+            <p class="is-size-7 has-text-grey" style="margin-top: 0.5rem;">
+              이 텍스트는 <a href="index.html">영어 원문</a>을 자동 번역한 것입니다.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="loop-gif">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths has-text-centered">
+          <figure class="image" style="display: flex; justify-content: center;">
+            <img src="static/gifs/043+076+174.gif" alt="BBox-Mask-Pose loop GIF" style="max-width: 360px; height: auto; display: block; margin: 0 auto;" />
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="papers">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 has-text-centered">논문</h2>
+          <div class="columns is-multiline">
+            <div class="column is-half">
+              <div class="card paper-card">
+                <div class="card-content">
+                  <div class="publication-title">
+                  <p class="title is-4">Detection, Pose Estimation and Segmentation for Multiple Bodies: Closing the Virtuous Circle</p>
+                  </div>
+                  <p class="subtitle is-6">ICCV 2025</p>
+                  <div class="is-size-6 publication-authors">
+                    <span class="author-block">
+                      <a href="https://mirapurkrabek.github.io/" target="_blank">Miroslav Purkrabek</a><sup></sup></span>,
+                  <span class="author-block">
+                    <a href="https://cmp.felk.cvut.cz/~matas/" target="_blank">Jiri Matas</a><sup></sup></span>
+                  </span>
+                </div>
+                
+                <div class="is-size-6 publication-authors">
+                  <span class="author-block">
+                    <a href="https://vrg.fel.cvut.cz" target="_blank">Visual Recognition Group</a>
+                    <br>
+                    Prague 체코공과대학교
+                  </span>
+                </div>
+                                <div class="buttons are-small">
+                                  <a class="button is-link is-light" href="static/pdfs/BBoxMaskPose.pdf" target="_blank">
+                                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                                    <span>논문+부록</span>
+                                  </a>
+                                  <a class="button is-link is-light" href="https://arxiv.org/abs/2412.01562" target="_blank">
+                                    <span class="icon"><i class="ai ai-arxiv"></i></span>
+                                    <span>arXiv</span>
+                                  </a>
+                                  <a class="button is-link is-light" href="static/pdfs/ICCV25-BBoxMaskPose-poster.pdf" target="_blank">
+                                    <span class="icon"><i class="far fa-clipboard"></i></span>
+                                    <span>포스터</span>
+                                  </a>
+                                </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="column is-half">
+              <div class="card paper-card">
+                <div class="card-content">
+                  <div class="publication-title">
+                  <p class="title is-4">SAM-pose2seg: Pose-Guided Human Instance Segmentation in Crowds</p>
+                  </div>
+                  <p class="subtitle is-6">CVWW 2026</p>
+                  <div class="is-size-6 publication-authors">
+                    <span class="author-block">
+                      Constantin Kolomiiets<sup></sup></span>,
+                    <span class="author-block">
+                      <a href="https://mirapurkrabek.github.io/" target="_blank">Miroslav Purkrabek</a><sup></sup></span>,
+                  <span class="author-block">
+                    <a href="https://cmp.felk.cvut.cz/~matas/" target="_blank">Jiri Matas</a><sup></sup></span>
+                  </span>
+                </div>
+                
+                <div class="is-size-6 publication-authors">
+                  <span class="author-block">
+                    <a href="https://vrg.fel.cvut.cz" target="_blank">Visual Recognition Group</a>
+                    <br>
+                    Prague 체코공과대학교
+                  </span>
+                </div>
+                                <div class="buttons are-small">
+                                  <a class="button is-link is-light" href="https://arxiv.org/abs/2601.08982" target="_blank">
+                                    <span class="icon"><i class="ai ai-arxiv"></i></span>
+                                    <span>arXiv</span>
+                                  </a>
+                                </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="column is-half">
+              <div class="card paper-card">
+                <div class="card-content">
+                  <div class="publication-title">
+                  <p class="title is-4"><a href="" target="_blank">ProbPose: A Probabilistic Approach to 2D Human Pose Estimation</a></p>
+                  </div>
+                  <p class="subtitle is-6">CVPR 2025</p>
+                  <div class="is-size-6 publication-authors">
+                    <span class="author-block">
+                      <a href="https://mirapurkrabek.github.io/" target="_blank">Miroslav Purkrabek</a><sup></sup></span>,
+                  <span class="author-block">
+                    <a href="https://cmp.felk.cvut.cz/~matas/" target="_blank">Jiri Matas</a><sup></sup></span>
+                  </span>
+                </div>
+                
+                <div class="is-size-6 publication-authors">
+                  <span class="author-block">
+                    <a href="https://vrg.fel.cvut.cz" target="_blank">Visual Recognition Group</a>
+                    <br>
+                    Prague 체코공과대학교
+                  </span>
+                </div>
+                                <div class="buttons are-small">
+                                  <a class="button is-link is-light" href="https://mirapurkrabek.github.io/ProbPose/" target="_blank">프로젝트 웹사이트</a>
+                                  <a class="button is-link is-light" href="https://arxiv.org/abs/2412.02254" target="_blank">
+                                    <span class="icon"><i class="ai ai-arxiv"></i></span>
+                                    <span>arXiv</span>
+                                  </a>
+                                </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="column is-half">
+              <div class="card paper-card">
+                <div class="card-content">
+                  <div class="publication-title">
+                  <p class="title is-4">BBoxMaskPose v2:<br>Expanding Mutual Conditioning to 3D</p>
+                  </div>
+                   <br>
+                  <div class="is-size-6 publication-authors">
+                    <span class="author-block">
+                      <a href="https://mirapurkrabek.github.io/" target="_blank">Miroslav Purkrabek</a><sup></sup></span>,
+                    <span class="author-block">
+                      Constantin Kolomiiets<sup></sup></span>,
+                  <span class="author-block">
+                    <a href="https://cmp.felk.cvut.cz/~matas/" target="_blank">Jiri Matas</a><sup></sup></span>
+                  </span>
+                </div>
+                
+                <div class="is-size-6 publication-authors">
+                  <span class="author-block">
+                    <a href="https://vrg.fel.cvut.cz" target="_blank">Visual Recognition Group</a>
+                    <br>
+                    Prague 체코공과대학교
+                  </span>
+                </div>
+                                <div class="buttons are-small">
+                                  <a class="button is-link is-light" href="https://arxiv.org/abs/2601.08982" target="_blank">
+                                    <span class="icon"><i class="ai ai-arxiv"></i></span>
+                                    <span>arXiv (곧 공개)</span>
+                                  </a>
+                                </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section hero is-light" id="overview">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 has-text-centered">프로젝트 개요</h2>
+          <div class="content has-text-justified">
+            <p>
+              바운딩 박스, 인스턴스 마스크, 포즈는 인체의 상보적 측면을 포착하며, 이들의 상호 일관성을 강제하면 혼잡한 장면에서 지배적인 모호성이 해소됩니다.
+              BBox–Mask–Pose 프레임워크는 검출, 포즈 추정, 분할을 반복 루프로 연결하고 각 예측을 다른 예측의 개선에 사용합니다.
+              <strong>ProbPose</strong>는 보정된 불확실성, 가시성, 존재성 모델링을 추가해 가림과 크롭 상황에서 키포인트를 안정화합니다.
+              <strong>PMPose</strong>는 확률적 모델링과 마스크 조건화를 결합하여 밀집 상호작용 환경에서도 강건한 top-down 포즈 추정을 가능하게 합니다.
+              <strong>SAM-pose2seg</strong>는 SAM을 포즈 유도 인체 분할에 특화하여 프롬프트를 단순화하고 군중 장면의 마스크 품질을 향상합니다.
+              이 구성 요소들은 함께 <strong>BBoxMaskPose v2</strong>를 이루며, 상호작용하는 사람 분리를 크게 개선하고 COCO, OCHuman 및 하위 3D 포즈 추정에서 새로운 SOTA를 달성합니다.
+              이는 OCHuman에서 50 AP를 넘는 최초의 방법입니다.
+              본 연구는 소형 특화 모델 간 구조화된 상호 조건화가 대규모 범용 인체 파운데이션 모델을 확장하는 것보다 더 효과적일 수 있음을 보여줍니다.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section hero" id="contributions">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 has-text-centered">기여</h2>
+          <p class="has-text-centered is-size-6" style="margin-bottom: 1rem;">
+            모든 구성 요소는
+            <a href="https://github.com/MiraPurkrabek/BBoxMaskPose" target="_blank">GitHub 코드베이스</a>에 포함됩니다.
+          </p>
+          <div class="columns is-multiline">
+            <div class="column is-half">
+              <div class="card feature-card">
+                <div class="card-content">
+                  <p class="title is-5">BBox-Mask-Pose</p>
+                  <p class="content">
+                    검출, 포즈 추정, 인스턴스 분할을 반복적으로 연결하는 루프로, 각 예측은 다른 예측에 명시적으로 조건화됩니다.
+                    표현 간 일관성을 강제함으로써 루프가 점진적으로 오류를 교정하고, 상호작용하는 인물을 분리하며, 누락된 인스턴스를 복원합니다.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="column is-half">
+              <div class="card feature-card">
+                <div class="card-content">
+                  <p class="title is-5">PMPose</p>
+                  <p class="content">마스크 조건화와 확률적 키포인트 표현을 결합한 top‑down 2D 포즈 추정기로, 특히 혼잡한 장면에서 top‑down 계열의 SOTA 성능을 달성합니다.</p>
+                </div>
+              </div>
+            </div>
+            <div class="column is-half">
+              <div class="card feature-card">
+                <div class="card-content">
+                  <p class="title is-5">SAM-pose2seg</p>
+                  <p class="content">
+                  2D 포즈 키포인트로부터 사람을 분할하도록 SAM을 적응시킨 포즈 유도 인스턴스 분할 모델입니다.
+                  프롬프팅과 디코더를 포즈 단서에 정렬해 군중 장면에서 더 깔끔하고 안정적인 마스크를 생성합니다.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="column is-half">
+              <div class="card feature-card">
+                <div class="card-content">
+                  <p class="title is-5">OCHuman-Pose 데이터셋</p>
+                  <p class="content">
+                    고밀도 장면을 위한 새로운 다인(多人) 데이터입니다.
+                    OCHuman 데이터셋을 확장하여, 이전에 무시되던 인스턴스까지 포함해 모든 가시 인물에 2D 포즈 주석을 추가했습니다.
+                    원래의 OCHuman보다 검출과 포즈 추정을 더 정확하게 평가할 수 있습니다.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <section class="section hero is-light" id="ochuman-pose">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 has-text-centered">OCHuman-Pose 데이터셋</h2>
+          <div class="content has-text-justified">
+            <p>
+              OCHuman-Pose 데이터셋은 Hugging Face에 호스팅되어 있습니다.
+              아래 링크에서 파일을 다운로드하세요.
+            </p>
+            <p class="has-text-centered">
+              <a class="button is-link is-light">
+                <span class="icon"><i class="fas fa-download"></i></span>
+                <span>Hugging Face 데이터셋 (곧 공개)</span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3 has-text-centered">설명 비디오 (2분)</h2>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <div class="publication-video">
+              <iframe src="https://www.youtube.com/embed/U05yUP4b2LQ" frameborder="0" allow="autoplay; encrypted-media"
+                allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section hero is-light" style="margin-bottom: 0;padding-bottom: 0;">
+    <div class="container is-max-desktop" style="margin-bottom: 0;">
+      <div class="columns is-centered has-text-centered" style="margin-bottom: 0;">
+        <div class="column is-four-fifths" style="margin-bottom: 0;padding-bottom: 0;">
+          <h2 class="title is-3">결과</h2>
+          <div class="content has-text-justified">
+            <p>
+              RTMDet(왼쪽)의 검출/분할과 BBox-Mask-Pose(오른쪽)를 비교합니다.
+              BMP는 검출기가 제공한 분할 마스크를 개선하며, 특히 사지와 같은 분리된 신체 부위에서 효과적입니다.
+              BBox-Mask-Pose는 경계 상자가 극도로 겹치는 장면에서도 올바른 인원 수를 검출합니다.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero is-small is-light is-centered" style="margin-top: 0;padding-top: 0;">
+    <div class="hero-body" style="margin-top: 0;padding-top: 0;">
+      <div class="container" style="margin-top: 0;padding-top: 0;">
+        <div id="results-carousel-1" class="carousel results-carousel" style="margin-top: 0;padding-top: 0;">
+          <div class="item">
+            <img src="static/images/segmentation_comparison/004849_comparison.jpg" alt="004849.jpg"
+              style="max-width: 100%; height: auto;" />
+          </div>
+          <div class="item">
+            <img src="static/images/segmentation_comparison/004971_comparison.jpg" alt="004971.jpg"
+              style="max-width: 100%; height: auto;" />
+          </div>
+          <div class="item">
+            <img src="static/images/segmentation_comparison/005002_comparison.jpg" alt="005002.jpg"
+              style="max-width: 100%; height: auto;" />
+          </div>
+          <div class="item">
+            <img src="static/images/segmentation_comparison/005017_comparison.jpg" alt="005017.jpg"
+              style="max-width: 100%; height: auto;" />
+          </div>
+          <div class="item">
+            <img src="static/images/segmentation_comparison/005050_comparison.jpg" alt="005050.jpg"
+              style="max-width: 100%; height: auto;" />
+          </div>
+          <div class="item">
+            <img src="static/images/segmentation_comparison/005056_comparison.jpg" alt="005056.jpg"
+              style="max-width: 100%; height: auto;" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="hero is-small is-light is-centered" style="margin-top: 0;padding-top: 0;">
+    <div class="hero-body" style="margin-top: 0;padding-top: 0;">
+      <div class="container" style="margin-top: 0;padding-top: 0;">
+        <div id="results-carousel-2" class="carousel results-carousel" style="margin-top: 0;padding-top: 0;">
+          <div class="item">
+            <img src="static/images/segmentation_comparison/004635_comparison.jpg" alt="004635.jpg"
+              style="max-width: 100%; height: auto;" />
+          </div>
+          <div class="item">
+            <img src="static/images/segmentation_comparison/004655_comparison.jpg" alt="004655.jpg"
+              style="max-width: 100%; height: auto;" />
+          </div>
+          <div class="item">
+            <img src="static/images/segmentation_comparison/004684_comparison.jpg" alt="004684.jpg"
+              style="max-width: 100%; height: auto;" />
+          </div>
+          <div class="item">
+            <img src="static/images/segmentation_comparison/004974_comparison.jpg" alt="004974.jpg"
+              style="max-width: 100%; height: auto;" />
+          </div>
+          <div class="item">
+            <img src="static/images/segmentation_comparison/004981_comparison.jpg" alt="004981.jpg"
+              style="max-width: 100%; height: auto;" />
+          </div>
+          <div class="item">
+            <img src="static/images/segmentation_comparison/004983_comparison.jpg" alt="004983.jpg"
+              style="max-width: 100%; height: auto;" />
+          </div>
+          <div class="item">
+            <img src="static/images/segmentation_comparison/005044_comparison.jpg" alt="005044.jpg"
+              style="max-width: 100%; height: auto;" />
+          </div>
+          <div class="item">
+            <img src="static/images/segmentation_comparison/005048_comparison.jpg" alt="005048.jpg"
+              style="max-width: 100%; height: auto;" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content is-light">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
+        @InProceedings{BMPv2,
+            author    = {Purkrabek, Miroslav and Kolomiiets, Constantin and Matas, Jiri},
+            title     = {BBoxMaskPose v2: Expanding Mutual Conditioning to 3D},
+            booktitle = {arXiv preprint arXiv:to be added},
+            year      = {2026}
+       }
+
+        @InProceedings{Purkrabek2025ICCV,
+            author    = {Purkrabek, Miroslav and Matas, Jiri},
+            title     = {Detection, Pose Estimation and Segmentation for Multiple Bodies: Closing the Virtuous Circle},
+            booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+            month     = {October},
+            year      = {2025}
+        }
+
+        @InProceedings{Kolomiiets2026CVWW,
+            author    = {Kolomiiets, Constantin and Purkrabek, Miroslav and Matas, Jiri},
+            title     = {SAM-pose2seg: Pose-Guided Human Instance Segmentation in Crowds},
+            booktitle = {Computer Vision Winter Workshop (CVWW)},
+            year      = {2026}
+        }
+      </code></pre>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              이 페이지는 <a href="https://github.com/vinthony/project-page-template">수정 버전</a>의
+              <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a>을 기반으로 제작되었습니다. 제작자: <a
+                href="https://github.com/vinthony">vinthony</a>.
+
+              <br> 이 웹사이트는 <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>에 따라 배포됩니다.
+            </p>
+
+            <div id="dummy-div"></div>
+            <script>
+              var date = document.lastModified;
+              document.getElementById("dummy-div").innerHTML = "최종 업데이트: " + date;
+            </script>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
 </body>
 
 </html>
